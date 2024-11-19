@@ -1,85 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect layout */
+}
+
 /* General body styling */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%; /* Ensure full height for flexbox layout */
+    height: 100vh;
 }
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather+Sans&display=swap');
 
 /* Hero Section with Red to Green Gradient */
 .hero {
     background: linear-gradient(135deg, #b90f0f, #13731f);  /* Red to Green gradient */
     color: white;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 4rem 2rem;  /* More padding on larger screens */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;  /* Ensure the header takes full width */
-    box-sizing: border-box;  /* Include padding in element's total width */
+    width: 100%;
+    font-family: 'Great Vibes', cursive; /* Apply Great Vibes to hero text */
 }
 
-
-/* Hero Text */
+/* Hero Title */
 .hero h1 {
     font-size: 2.5rem;
-    margin: 0.5rem 0;
+    margin-bottom: 1rem;
 }
 
+/* Hero Description */
 .hero p {
     font-size: 1.2rem;
-    margin: 0;
+    margin-bottom: 1rem;
 }
 
 /* Wishlist Section */
 .wishlist {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Grid layout for cards */
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    flex-grow: 1;  /* Allow this section to grow and take available space */
+    flex-grow: 1;
 }
 
 /* Card Styling */
 .card {
     background: white;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    height: auto;
-    width: 100%;
+    height: 100%;
+    position: relative; /* Necessary for positioning the price-rating element */
+    font-family: 'Merriweather Sans', sans-serif; /* Apply Merriweather Sans to cards */
 }
 
 /* Card Hover Effect */
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* Embedly Card iframe Styling */
-.card iframe {
-    width: 100%;
-    height: 200px;
-    border: none;
-    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Card Content Styling */
 .card-content {
     padding: 1em;
     text-align: center;
-    flex-grow: 1;
 }
 
 /* Card Title */
@@ -108,7 +106,21 @@ body {
 }
 
 .card-content a:hover {
+    padding: 1rem;
     background: #13731f;  /* Christmas green */
+}
+
+.embedly-card {
+    height: 19rem;
+}
+
+.price-rating {
+    font-size: 1.25rem;
+    color: #b90f0f; /* Christmas Red for price rating */
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    font-weight: bold;
 }
 
 /* Footer Styling */
@@ -120,27 +132,86 @@ footer {
     width: 100%;
     position: sticky;
     bottom: 0;
+    font-family: 'Great Vibes', cursive; /* Apply Great Vibes to footer text */
 }
 
 /* Mobile-specific Styles */
-@media (max-width: 768px) {
-    /* Adjust hero text for smaller screens */
+@media (max-width: 480px) {
+    /* Hero Section */
     .hero h1 {
-        font-size: 2rem; /* Smaller font size for the title */
+        font-size: 1.8rem; /* Smaller title font size */
     }
 
     .hero p {
-        font-size: 1rem; /* Smaller font size for the description */
+        font-size: 1rem; /* Smaller description font size */
     }
 
-    /* Adjust card layout for smaller screens */
+    /* Wishlist Layout (Single Column on Mobile) */
     .wishlist {
-        grid-template-columns: 1fr;  /* Stack cards in a single column */
+        grid-template-columns: 1fr;  /* Single column layout */
         gap: 15px;
+        padding: 10px;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    /* Card content adjustments */
+    .card-content {
+        padding: 1rem; /* Adjust card content padding */
+    }
+
+    /* Footer */
+    footer {
+        padding: 1rem;
+    }
+}
+
+/* Tablet-specific Styles (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2rem;  /* Medium title font size */
+    }
+
+    .hero p {
+        font-size: 1.1rem; /* Medium description font size */
+    }
+
+    /* Wishlist Layout */
+    .wishlist {
+        grid-template-columns: repeat(2, 1fr);  /* Two-column layout */
+        gap: 20px;
         padding: 15px;
     }
 
-    .card-content {
-        padding: 1rem; /* Ensure proper padding on small screens */
+    /* Footer */
+    footer {
+        padding: 1.2rem;
+    }
+}
+
+/* Desktop-specific Styles (min-width: 1024px) */
+@media (min-width: 1024px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 3rem; /* Larger title font size */
+    }
+
+    .hero p {
+        font-size: 1.3rem; /* Larger description font size */
+    }
+
+    /* Wishlist Layout */
+    .wishlist {
+        grid-template-columns: repeat(3, 1fr);  /* Three-column layout */
+        gap: 25px;
+        padding: 20px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.5rem;
     }
 }
