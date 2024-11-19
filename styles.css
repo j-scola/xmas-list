@@ -135,6 +135,54 @@ footer {
     font-family: 'Great Vibes', cursive; /* Apply Great Vibes to footer text */
 }
 
+/* Desktop-specific Styles */
+@media (min-width: 1024px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 3rem; /* Larger title font size */
+    }
+
+    .hero p {
+        font-size: 1.3rem; /* Larger description font size */
+    }
+
+    /* Wishlist Layout */
+    .wishlist {
+        grid-template-columns: repeat(3, 1fr);  /* Three-column layout */
+        gap: 25px;
+        padding: 20px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.5rem;
+    }
+}
+
+/* Tablet-specific Styles */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2rem;  /* Medium title font size */
+    }
+
+    .hero p {
+        font-size: 1.1rem; /* Medium description font size */
+    }
+
+    /* Wishlist Layout */
+    .wishlist {
+        grid-template-columns: repeat(2, 1fr);  /* Two-column layout */
+        gap: 20px;
+        padding: 15px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.2rem;
+    }
+}
+
 /* Mobile-specific Styles */
 @media (max-width: 480px) {
     /* Hero Section */
@@ -165,53 +213,5 @@ footer {
     /* Footer */
     footer {
         padding: 1rem;
-    }
-}
-
-/* Tablet-specific Styles (max-width: 768px) */
-@media (max-width: 768px) {
-    /* Hero Section */
-    .hero h1 {
-        font-size: 2rem;  /* Medium title font size */
-    }
-
-    .hero p {
-        font-size: 1.1rem; /* Medium description font size */
-    }
-
-    /* Wishlist Layout */
-    .wishlist {
-        grid-template-columns: repeat(2, 1fr);  /* Two-column layout */
-        gap: 20px;
-        padding: 15px;
-    }
-
-    /* Footer */
-    footer {
-        padding: 1.2rem;
-    }
-}
-
-/* Desktop-specific Styles (min-width: 1024px) */
-@media (min-width: 1024px) {
-    /* Hero Section */
-    .hero h1 {
-        font-size: 3rem; /* Larger title font size */
-    }
-
-    .hero p {
-        font-size: 1.3rem; /* Larger description font size */
-    }
-
-    /* Wishlist Layout */
-    .wishlist {
-        grid-template-columns: repeat(3, 1fr);  /* Three-column layout */
-        gap: 25px;
-        padding: 20px;
-    }
-
-    /* Footer */
-    footer {
-        padding: 1.5rem;
     }
 }
