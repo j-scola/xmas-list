@@ -1,0 +1,30 @@
+{
+  "name": "xmas-list",
+  "version": "1.0.0",
+  "description": "tis the season",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-scola/xmas-list.git"
+  },
+  "keywords": [
+    "xmas"
+  ],
+  "author": "James Scolamieri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j-scola/xmas-list/issues"
+  },
+  "homepage": "https://github.com/j-scola/xmas-list#readme",
+  "dependencies": {
+    "papaparse": "^5.4.1",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "vite": "^5.4.11"
+  }
+}
