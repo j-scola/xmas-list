@@ -72,6 +72,11 @@
   right: 1rem;
   font-weight: bold;
   transition: color 0.8s ease;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow:
+    -12px -4px 10px 6px rgba(255, 255, 255, 1),
+    10px -4px 10px 6px rgba(255, 255, 255, 1);
 }
 
 .card:hover .price-rating {

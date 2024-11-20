@@ -14,6 +14,7 @@ const WishlistCard = ({
     const script = document.createElement('script');
     script.src = 'https://cdn.embedly.com/widgets/platform.js';
     script.async = true;
+    script.type = 'text/javascript';
     document.body.appendChild(script);
     return () => {
       document.body.removeChild(script);
@@ -33,6 +34,7 @@ const WishlistCard = ({
         target="_blank"
         rel="noopener noreferrer"
         className="embedly-card"
+        loading="lazy"
       >
         {embedLabel}
       </a>
