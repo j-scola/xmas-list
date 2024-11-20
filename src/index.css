@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather+Sans&display=swap');
+
+:root {
+  --green: #0f7833;
+  --red: #ce1713;
+  --gold: #d5b534;
+  --light-grey: #e1e1e1;
+  --dark-grey: #666;
+  --white: white;
+  --font: 'Merriweather Sans', sans-serif;
+  --hero-font: 'Great Vibes', cursive;
+  --font-size: 16px;
+  --spacing-unit: 8px;
+}
+
+body {
+  background-color: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-color: light-green;
+}
+
+button {
+  background-color: var(--red);
+  padding: var(--spacing-unit) var(--spacing-unit * 2);
+  border: none;
+  color: var(--light-grey);
+}

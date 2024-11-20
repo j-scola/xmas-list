@@ -2,9 +2,13 @@
   "name": "xmas-list",
   "version": "1.0.0",
   "description": "tis the season",
-  "main": "index.js",
+  "main": "./src/main.jsx",
   "scripts": {
-    "test": "jest"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "jest",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -21,10 +25,12 @@
   "homepage": "https://github.com/j-scola/xmas-list#readme",
   "dependencies": {
     "papaparse": "^5.4.1",
-    "react": "^18.3.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.3",
+    "prettier": "^3.3.3",
     "vite": "^5.4.11"
   }
 }
